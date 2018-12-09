@@ -1,0 +1,26 @@
+{
+  "name": "discord-gifbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "supernatural",
+    "spn",
+    "gif",
+    "animated"
+  ],
+  "author": "Eric NICOLAS <ccjmne@gmail.com> (ccjmne)",
+  "license": "GPL-3.0",
+  "sideEffects": false,
+  "dependencies": {
+    "@akanass/rx-http-request": "^3.1.0",
+    "discord.js": "^11.4.2",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {}
+}
