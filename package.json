@@ -1,10 +1,13 @@
 {
   "name": "discord-gifbot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A fully-customisable Discord bot that reacts to trigger words with appropriate GIF",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode development index.js",
+    "start": "node dist/main.js",
+    "heroku-prebuild": "npm install --dev",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [
     "discord",
@@ -22,5 +25,8 @@
     "discord.js": "^11.4.2",
     "rxjs": "^6.3.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.1.0"
+  }
 }

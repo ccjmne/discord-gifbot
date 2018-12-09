@@ -1,7 +1,10 @@
 'use strict';
 
+if(!process.env.DISCORD_TOKEN) {
+  throw new Error('Environment variable DISCORD_TOKEN not set');
+}
+
 const client = new(require('discord.js').Client)();
-const auth = require('./secret.json').token;
 
 import { latest as characters } from './utils/configuration';
 
@@ -47,4 +50,4 @@ client.on('messageDelete', message => {
   }
 });
 
-client.login(auth);
+client.login(process.env.DISCORD_TOKEN);
