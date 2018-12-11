@@ -45,7 +45,7 @@ client.on('messageDelete', message => {
     return;
   }
 
-  if (message.author.discriminator === '9669') { // TODO: use her USER ID
+  if (message.author.id === '487275265228013568') {
     message.channel.send(`**Hattie** just "sneakily" attempted to **delete** her message that said:\`\`\`\n${ message.content }\`\`\`\n***SHAME ON YOU, HATTIE!!!*** :rage:`);
   }
 });
