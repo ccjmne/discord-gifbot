@@ -11,6 +11,7 @@ import { latest as characters } from './utils/configuration';
 import handleCharacters from './commands/characters';
 import handleReactions from './commands/reactions';
 import handleRoles from './commands/roles';
+import handleSlap from './commands/slap';
 
 import parse from './utils/parsing';
 
@@ -34,6 +35,7 @@ client.on('message', message => {
   handleCharacters(message);
   handleReactions(message);
   handleRoles(message);
+  handleSlap(message);
 
   if (parse(message).needsDeletion) {
     message.delete();
