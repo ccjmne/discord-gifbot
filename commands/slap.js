@@ -2,7 +2,7 @@
 
 import parse from '../utils/parsing';
 
-const len = 5;
+const len = 4;
 
 export default function handle(message) {
   const parsed = parse(message);
