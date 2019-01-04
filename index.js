@@ -1,6 +1,6 @@
 'use strict';
 
-if(!process.env.DISCORD_TOKEN) {
+if (!process.env.DISCORD_TOKEN) {
   throw new Error('Environment variable DISCORD_TOKEN not set');
 }
 
@@ -9,6 +9,7 @@ const client = new(require('discord.js').Client)();
 import { latest as characters } from './utils/configuration';
 
 import handleCharacters from './commands/characters';
+import handleCountdown from './commands/countdown';
 import handleReactions from './commands/reactions';
 import handleRoles from './commands/roles';
 import handleSlap from './commands/slap';
@@ -33,6 +34,7 @@ client.on('message', message => {
   }
 
   handleCharacters(message);
+  handleCountdown(message);
   handleReactions(message);
   handleRoles(message);
   handleSlap(message);
